@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="全职高手3 - 顶尖荣耀同人小说连载平台，提供全职高手3最新章节阅读、角色深度解析、全职业图鉴及同人创作社区，全方位还原荣耀世界。">
+    <meta name="keywords" content="全职高手3, 荣耀同人, 荣耀小说, 全职高手续写, 叶修同人">
+    <title>全职高手3-荣耀续写与同人深度阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e6b800; /* 荣耀黄 */
+            --primary-hover: #c49400;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-blue: #00bcd4;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .nav-actions button {
+            background-color: var(--primary-color);
+            color: #000;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .nav-actions button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/glory/1600/900') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background-color: var(--primary-hover);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+        }
+
+        .section-header a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-header a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 小说卡片网格 */
+        .novel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .card-cover {
+            height: 180px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: rgba(230, 184, 0, 0.1);
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list {
+            font-size: 0.85rem;
+        }
+
+        .chapter-list li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+
+        .chapter-list a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 角色图鉴侧边栏 */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .role-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .role-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .role-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .role-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .role-info span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* 职业介绍 */
+        .class-section {
+            background-color: #181818;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .class-item {
+            background-color: var(--bg-card);
+            border-radius: 6px;
+            padding: 15px 5px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .class-item:hover {
+            border-color: var(--primary-color);
+            background-color: #252525;
+        }
+
+        .class-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 10px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .class-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #000;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .class-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .nav-actions button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-inner">
+        <a href="#" class="logo">荣耀<span>续写</span></a>
+        <nav>
+            <ul>
+                <li><a href="#latest">最新章节</a></li>
+                <li><a href="#roles">角色图鉴</a></li>
+                <li><a href="#classes">全职业</a></li>
+                <li><a href="#community">同人社区</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button>加入书架</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>全职高手3：<span class="highlight">荣耀再起</span></h1>
+            <p>当嘉世战队的战旗再次飘扬，当叶修的第十一个冠军梦重燃。这是关于坚持、团队与荣耀的续篇。沉浸式阅读体验，重温巅峰时刻。</p>
+            <a href="#latest" class="cta-button">开始阅读</a>
+        </div>
+    </section>
+
+    <!-- 最新章节推荐 -->
+    <section id="latest" class="container">
+        <div class="section-header">
+            <h2>最新连载</h2>
+            <a href="#">查看更多 &rarr;</a>
+        </div>
+        <div class="novel-grid">
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/glory1/400/300" alt="全职高手3封面">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第三百二十章：新赛制</h3>
+                    <div class="card-meta">
+                        <span class="tag">热血</span>
+                        <span>叶修</span>
+                    </div>
+                    <p class="card-desc">随着新的赛季赛制公布，联盟格局再次发生变动。嘉世战队面临前所未有的挑战，而叶修的微草之路又会有怎样的变数？</p>
+                    <div class="card-footer">
+                        <ul class="chapter-list">
+                            <li><a href="#">第321章 逆转</a></li>
+                            <li><a href="#">第320章 新赛制</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/glory2/400/300" alt="全职高手3封面">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第三百一十九章：暗夜</h3>
+                    <div class="card-meta">
+                        <span class="tag">悬疑</span>
+                        <span>苏沐橙</span>
+                    </div>
+                    <p class="card-desc">深夜的训练室里，似乎隐藏着不为人知的秘密。苏沐橙的直觉告诉她，这不仅仅是战术上的博弈，更是心理层面的较量。</p>
+                    <div class="card-footer">
+                        <ul class="chapter-list">
+                            <li><a href="#">第320章 新赛制</a></li>
+                            <li><a href="#">第319章 暗夜</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/glory3/400/300" alt="全职高手3封面">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第三百一十八章：磨合</h3>
+                    <div class="card-meta">
+                        <span class="tag">团队</span>
+                        <span>周泽楷</span>
+                    </div>
+                    <p class="card-desc">轮回战队的新人逐渐成长，周泽楷与枪神的对决不再是单方面的碾压，而是真正的强强对话。荣耀，从来不是一个人的战斗。</p>
+                    <div class="card-footer">
+                        <ul class="chapter-list">
+                            <li><a href="#">第319章 暗夜</a></li>
+                            <li><a href="#">第318章 磨合</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/seed/glory4/400/300" alt="全职高手3封面">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">第三百一十七章：觉醒</h3>
+                    <div class="card-meta">
+                        <span class="tag">成长</span>
+                        <span>唐柔</span>
+                    </div>
+                    <p class="card-desc">唐柔在遭遇连败后，终于找到了突破瓶颈的关键。她的战斗风格正在发生质的改变，那是对荣耀更深层次的理解。</p>
+                    <div class="card-footer">
+                        <ul class="chapter-list">
+                            <li><a href="#">第318章 磨合</a></li>
+                            <li><a href="#">第317章 觉醒</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 角色与职业布局 -->
+    <section class="class-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>荣耀世界</h2>
+                <a href="#">探索更多 &rarr;</a>
+            </div>
+            
+            <div class="content-wrapper">
+                <!-- 主内容区：角色图鉴 -->
+                <div class="main-content">
+                    <div class="section-header" style="margin-bottom: 20px;">
+                        <h3>热门角色图鉴</h3>
+                    </div>
+                    <div class="novel-grid">
+                        <article class="card">
+                            <div class="card-cover" style="height: 240px;">
+                                <img src="https://picsum.photos/seed/yexiu/400/300" alt="叶修">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">叶修</h3>
+                                <p class="card-desc" style="-webkit-line-clamp: 2;">前嘉世战队队长，现任兴欣网吧老板。荣耀教科书，第十一个总冠军拥有者。战斗法师，龙牙。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-cover" style="height: 240px;">
+                                <img src="https://picsum.photos/seed/sumocheng/400/300" alt="苏沐橙">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">苏沐橙</h3>
+                                <p class="card-desc" style="-webkit-line-clamp: 2;">叶修的搭档，枪炮师。不仅技术高超，更是团队中的核心辅助。沐雨橙风的真名。</p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-cover" style="height: 240px;">
+                                <img src="https://picsum.photos/seed/zhoushizhi/400/300" alt="周泽楷">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">周泽楷</h3>
+                                <p class="card-desc" style="-webkit-line-clamp: 2;">轮回战队队长，枪神。性格沉默寡言，但对荣耀有着绝对的执着。千机伞使用专家。</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 侧边栏：全职业 -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">荣耀全职业</h3>
+                        <ul class="role-list">
+                            <li>
+                                <div class="role-avatar"><img src="https://picsum.photos/seed/cleric/50/50" alt="牧师"></div>
+                                <div class="role-info">
+                                    <h4>牧师</h4>
+                                    <span>治疗辅助</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="role-avatar"><img src="https://picsum.photos/seed/assassin/50/50" alt="刺客"></div>
+                                <div class="role-info">
+                                    <h4>刺客</h4>
+                                    <span>高爆发近战</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="role-avatar"><img src="https://picsum.photos/seed/archer/50/50" alt="弓箭手"></div>
+                                <div class="role-info">
+                                    <h4>弓箭手</h4>
+                                    <span>远程物理</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="role-avatar"><img src="https://picsum.photos/seed/warrior/50/50" alt="战斗法师"></div>
+                                <div class="role-info">
+                                    <h4>战斗法师</h4>
+                                    <span>近战控制</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="role-avatar"><img src="https://picsum.photos/seed/mage/50/50" alt="魔剑士"></div>
+                                <div class="role-info">
+                                    <h4>魔剑士</h4>
+                                    <span>魔法双修</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 常见问题 -->
+    <section class="container">
+        <div class="section-header">
+            <h2>阅读指南</h2>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">《全职高手3》的剧情是如何衔接原作的？ <span>+</span></div>
+            <div class="faq-answer">《全职高手3》作为同人续写作品，基于蝴蝶蓝原作《全职高手》的世界观和人物性格进行创作。故事设定在原作结局之后，延续叶修等人的冒险，旨在为读者提供更多关于荣耀世界的精彩故事。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">在哪里可以找到最新的章节？ <span>+</span></div>
+            <div class="faq-answer">您可以通过本站“最新连载”栏目查看最新更新的章节。所有内容均为同人原创或授权整理，请支持正版。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">如何参与同人创作或投稿？ <span>+</span></div>
+            <div class="faq-answer">请关注我们底部的“同人社区”板块，这里有专门的活动公告和投稿指南。欢迎各位高手分享您的作品。</div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>荣耀续写</h3>
+                <p style="color: #666; font-size: 0.9rem; line-height: 1.8;">
+                    致敬蝴蝶蓝老师的经典之作。我们致力于为《全职高手》粉丝提供最好的同人阅读体验。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>热门分类</h3>
+                <ul>
+                    <li><a href="#">战斗法师</a></li>
+                    <li><a href="#">枪炮师</a></li>
+                    <li><a href="#">元素法师</a></li>
+                    <li><a href="#">散人</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 荣耀续写同人站 版权所有. 本站为非盈利性粉丝网站，所有内容仅供学习交流。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // 简单的 FAQ 交互逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // 关闭其他打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+                          </html>
