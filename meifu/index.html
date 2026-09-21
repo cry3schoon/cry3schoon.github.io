@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="美服游戏下载指南：提供《魔兽世界》、《守望先锋》、《Apex英雄》等国际服游戏下载、安装教程、账号注册及服务器延迟优化建议，专注北美及欧美游戏社区体验。">
+    <meta name="keywords" content="美服,游戏下载,国际服,魔兽世界,守望先锋,Apex英雄,欧美游戏,海外游戏">
+    <title>美服-国际服游戏下载与体验指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-hot: #ff4757;
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tag.highlight {
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--primary-color);
+            border-color: rgba(0, 210, 255, 0.3);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 210, 255, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: #2d3748;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+
+        .btn-card:hover {
+            background: rgba(0, 210, 255, 0.1);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: #162032;
+            margin: 60px 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-content h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .guide-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .step-num {
+            font-size: 40px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+            min-width: 50px;
+        }
+
+        .step-text h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .step-text p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .sidebar-box {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-box h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Server Status */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .status-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .status-name {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .status-val {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1120;
+            padding: 60px 20px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">USGAMES</a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">热门推荐</a>
+                <a href="#">下载中心</a>
+                <a href="#">加速器评测</a>
+                <a href="#">社区论坛</a>
+            </nav>
+            <a href="#" class="btn-download">下载客户端</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>畅玩全球热门 <span>美服</span> 游戏</h1>
+                <p>提供《魔兽世界》、《Apex英雄》、《守望先锋》等主流国际服游戏下载与安装指南，帮助玩家轻松连接北美服务器，享受纯正欧美游戏体验。</p>
+                <div class="hero-tags">
+                    <span class="tag highlight">PC端</span>
+                    <span class="tag highlight">Steam</span>
+                    <span class="tag">Epic Games</span>
+                    <span class="tag">Blizzard</span>
+                    <span class="tag">EA Origin</span>
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <a href="#download" class="btn-download" style="padding: 12px 40px; font-size: 16px;">立即开始</a>
+                    <a href="#guide" style="padding: 12px 40px; border: 1px solid rgba(255,255,255,0.3); border-radius: 30px; font-weight: 600;">查看教程</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Games -->
+        <section class="container" id="download">
+            <div class="section-header">
+                <h2 class="section-title">热门美服游戏</h2>
+                <span class="section-subtitle">精选北美服务器热门大作</span>
+            </div>
+            
+            <div class="game-grid">
+                <!-- Game Card 1 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/wow/400/250" alt="魔兽世界" class="card-image">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><span class="status-dot"></span>运营中</span>
+                            <span>MMORPG</span>
+                        </div>
+                        <h3 class="card-title">魔兽世界</h3>
+                        <p class="card-desc">暴雪出品经典MMORPG，探索艾泽拉斯大陆，体验史诗级剧情与团队副本挑战。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card">下载客户端</a>
+                            <a href="#" class="btn-card">加速器</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 2 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/apex/400/250" alt="Apex英雄" class="card-image">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><span class="status-dot"></span>运营中</span>
+                            <span>TPS</span>
+                        </div>
+                        <h3 class="card-title">Apex英雄</h3>
+                        <p class="card-desc">Respawn出品的大逃杀射击游戏，拥有独特的英雄技能系统与快节奏战斗体验。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card">下载客户端</a>
+                            <a href="#" class="btn-card">加速器</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 3 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/ow2/400/250" alt="守望先锋2" class="card-image">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><span class="status-dot"></span>运营中</span>
+                            <span>MOBA</span>
+                        </div>
+                        <h3 class="card-title">守望先锋 2</h3>
+                        <p class="card-desc">经典射击MOBA游戏，支持6v6对战，拥有丰富的英雄角色与战术配合。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card">下载客户端</a>
+                            <a href="#" class="btn-card">加速器</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game Card 4 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/valo/400/250" alt="无畏契约" class="card-image">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span><span class="status-dot"></span>运营中</span>
+                            <span>FPS</span>
+                        </div>
+                        <h3 class="card-title">无畏契约</h3>
+                        <p class="card-desc">拳头游戏开发的战术射击游戏，独特的英雄技能与经济系统深受玩家喜爱。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card">下载客户端</a>
+                            <a href="#" class="btn-card">加速器</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="guide-section" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">新手指南</h2>
+                    <span class="section-subtitle">如何顺利进入美服游戏世界</span>
+                </div>
+
+                <div class="guide-layout">
+                    <div class="guide-content">
+                        <div class="guide-step">
+                            <div class="step-num">01</div>
+                            <div class="step-text">
+                                <h4>注册海外账号</h4>
+                                <p>访问游戏官网（如 Battle.net, Steam, Origin），使用国际邮箱（Gmail, Outlook等）注册账号。部分地区需配合加速器使用VPN辅助访问官网。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-num">02</div>
+                            <div class="step-text">
+                                <h4>下载官方客户端</h4>
+                                <p>通过官网提供的下载链接获取客户端。请务必认准官方渠道，避免下载含有病毒或木马的第三方修改版，以免导致账号封禁。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-num">03</div>
+                            <div class="step-text">
+                                <h4>选择服务器与加速</h4>
+                                <p>登录游戏后选择 "US West" 或 "US East" 服务器。建议开启游戏加速器节点至美国，以降低延迟，确保游戏体验流畅。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-num">04</div>
+                            <div class="step-text">
+                                <h4>支付与充值</h4>
+                                <p>美服游戏通常支持信用卡、PayPal或礼品卡充值。部分游戏支持国际支付宝，请根据个人情况选择最便捷的支付方式。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside>
+                        <div class="sidebar-box">
+                            <h4>常见问题 (FAQ)</h4>
+                            <div class="faq-item" onclick="toggleFaq(this)">
+                                <div class="faq-question">美服和亚服有什么区别？</div>
+                                <div class="faq-answer">美服拥有更快的更新速度、更纯正的英语交流环境以及更多的欧美玩家群体。</div>
+                            </div>
+                            <div class="faq-item" onclick="toggleFaq(this)">
+                                <div class="faq-question">玩美服需要加速器吗？</div>
+                                <div class="faq-answer">是的，由于网络环境限制，直接连接美服服务器通常会导致高延迟或连接失败，建议使用专业加速器。</div>
+                            </div>
+                            <div class="faq-item" onclick="toggleFaq(this)">
+                                <div class="faq-question">账号会被封禁吗？</div>
+                                <div class="faq-answer">只要通过正规渠道下载游戏、注册账号并遵守游戏规则，使用加速器也是合规的，不会导致封号。</div>
+                            </div>
+                            <div class="faq-item" onclick="toggleFaq(this)">
+                                <div class="faq-question">如何解决充值失败？</div>
+                                <div class="faq-answer">部分支付方式可能不支持国内银行卡，建议使用PayPal或购买游戏点卡进行充值。</div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Server Status -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">北美服务器状态</h2>
+            </div>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-name">北美东部 (US East)</div>
+                    <div class="status-val">24ms</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-name">北美西部 (US West)</div>
+                    <div class="status-val">35ms</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-name">北美中部 (US Central)</div>
+                    <div class="status-val">28ms</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于美服</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门服务</h4>
+                <ul>
+                    <li><a href="#">游戏下载</a></li>
+                    <li><a href="#">加速器推荐</a></li>
+                    <li><a href="#">账号交易</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>支持</h4>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">游戏论坛</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 美服游戏体验指南. All rights reserved. 本站仅供信息整理与分享，游戏版权归各开发商所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            // Close other items
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
